@@ -1,0 +1,70 @@
+/* General Section Styling */
+.admin-panel-section {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Typography */
+.admin-title {
+  font-size: 36px;
+  color: #101010;
+}
+
+.admin-description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Feature Grid Styling */
+.admin-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; 
+}
+
+.admin-icon {
+  font-size: 2rem;
+  /* Applying the blue outline color from the design */
+  color: #2b70a0; 
+}
+
+.admin-feature-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #010101;
+}
+
+/* Image Styling */
+.admin-mockup-image {
+ width:470px;
+ height:auto;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.08));
+}
+
+/* Responsive adjustments for tablets and mobile */
+@media (max-width: 991px) {
+  .admin-title {
+    font-size: 2rem;
+  }
+  .admin-description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 575px) {
+  .admin-title {
+    font-size: 1.6rem;
+  }
+  .admin-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .admin-mockup-image {
+    width: 100%;
+    max-width: 320px;
+  }
+}

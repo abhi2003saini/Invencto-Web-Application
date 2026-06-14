@@ -1,0 +1,945 @@
+.hero-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+  overflow: hidden;
+}
+.main-heading {
+  color: #111827;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+}
+.sub-heading {
+  color: #010101;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.description-text {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #010101;
+  line-height: 2;
+}
+.custom-link {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.custom-link:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+.cta-btn {
+  /* Font & Typography */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: white !important;
+  text-decoration: none;
+
+  /* Sizing & Shape */
+  display: inline-block;
+  padding: 14px 32px; 
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+
+  /* Background Gradient */
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+
+  /* Layout Context for Effects */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  /* Smooth Soft Shadow */
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.25);
+
+  /* Ultra-smooth customized physics curve */
+  transition: 
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+    box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.4s ease;
+}
+
+/* --- THE HOVER STATE --- */
+.cta-btn:hover {
+  color: white !important;
+  transform: translateY(-4px) scale(1.03); 
+  box-shadow: 0 12px 24px rgba(13, 110, 253, 0.45);
+}
+
+/* --- THE CLICKED STATE (Tactile Feedback) --- */
+.cta-btn:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
+  transition: transform 0.1s ease;
+}
+
+/* --- HOVER SHIMMER LIGHT STREAK --- */
+.cta-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cta-btn:hover::after {
+  animation: lightStreak 0.8s ease-out forwards;
+}
+
+@keyframes lightStreak {
+  0% { left: -60%; }
+  100% { left: 140%; }
+}
+
+/* Responsive font sizing for mobile */
+@media (max-width: 991px) {
+  .hero-section { padding: 50px 0; }
+  .main-heading { font-size: 2.5rem; }
+}
+
+.design-showcase-section {
+  padding: 80px 0 100px;
+  background: #f9fbff;
+}
+
+.section-header { max-width: 720px; }
+
+.section-label {
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0d6efd;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.section-feature{
+  font-size: 2.75rem;
+  color: #111827;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.section-feature h2{
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.section-description {
+  color: #010101;
+  font-size: 14px;
+  line-height: 1.9;
+  font-family: "Montserrat", sans-serif;
+}
+
+.design-card {
+  background: white;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.design-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.12);
+}
+
+.design-card-media {
+  overflow: hidden;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.design-card-media img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.design-card:hover .design-card-media img {
+  transform: scale(1.03);
+}
+
+.design-card-body {
+  background: white;
+}
+
+.design-card-tag {
+  display: inline-flex;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0d6efd;
+  background: rgba(13, 110, 253, 0.08);
+  margin-bottom: 1rem;
+}
+
+.design-card-body h3 {
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+  color: #111827;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+}
+
+.design-card-body p {
+  color: #6b7280;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.badge-group .badge {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.design-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0 1.6rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(13, 110, 253, 0.18);
+}
+
+.design-card-btn:hover {
+  transform: translateY(-2px) scale(1.01);
+  background: linear-gradient(135deg, #4f46e5 0%, #0d6efd 100%);
+  box-shadow: 0 18px 30px rgba(13, 110, 253, 0.22);
+}
+
+.design-card-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.18);
+}
+
+@media (max-width: 991px) {
+  .design-showcase-section { padding: 60px 0 70px; }
+  .section-header h2 { font-size: 2.15rem; }
+}
+
+@media (max-width: 767px) {
+  .design-card-media img { height: 240px; }
+}
+
+/* User Panel Section */
+.user-panel-section {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.panel-title {
+  font-size: 32px;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  font-family: "Montserrat", sans-serif;
+}
+.panel-head{
+  font-size: 45px;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+
+.panel-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #010101 !important;
+  max-width: 90%;
+  font-family: "Montserrat", sans-serif;
+}
+.panel-desc{
+  font-size: 14px;
+  line-height: 1.6;
+  color: #010101 !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* Feature Grid Styling */
+.feature-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #2b70a0; 
+}
+
+.feature-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Left Side Mockup Styling */
+.mockup-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.mockup-image {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 991px) {
+  .panel-title { font-size: 2rem; }
+  .panel-description { max-width: 100%; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: translate(-50%, -50%) scale(0.95); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(0.95); opacity: 1; }
+}
+
+.pink-backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  padding-bottom: 80%; 
+  background-color: #fff0f3;
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse-ring 4s ease-in-out infinite;
+}
+
+/* Services Section */
+.services-title {
+  font-size: 45px;
+  color: #010101;
+  letter-spacing: -0.5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.services-subtitle {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #010101;
+  font-weight: 500;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  background-color: var(--hover-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.service-icon-box {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-box {
+  transform: scale(1.05);
+}
+
+.service-card-title {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.service-card-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.service-btn-container {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-btn-container {
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-btn {
+  border: none;
+  font-size: 0.9rem;
+  transition: filter 0.3s ease;
+}
+
+.service-btn:hover {
+  filter: brightness(1.1);
+  color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+  .services-title { font-size: 2rem; }
+  .service-btn-container {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================================= */
+/* --- UPDATED: WHY BUILD A DATING APP SECTION --- */
+/* ========================================================= */
+
+.why-build-section {
+  font-family: "Montserrat", sans-serif;
+}
+
+.why-build-section .section-title {
+  font-size: 45px;
+  color: #010101;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.why-build-section .item-col {
+  min-height: 400px; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================= */
+/* Colored Info Boxes                        */
+/* ========================================= */
+.why-build-section .info-box {
+  background: linear-gradient(135deg, #e4f4f7 0%, #e0edf6 100%);
+  padding: 24px;
+  height: 160px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 5; /* High z-index so the box stays strictly ON TOP of the line */
+  width: 100%;
+}
+
+.why-build-section .info-box h5 {
+  font-size: 20px;
+  line-height: 1.3;
+  color: #1a202c;
+  font-weight: 600;
+  margin: 0;
+  z-index: 2;
+}
+
+.why-build-section .box-icon {
+  max-height: 120px;
+  object-fit: contain;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+/* ========================================= */
+/* Base Text Content Styling                 */
+/* ========================================= */
+.why-build-section .text-content {
+  flex: 1;
+  display: flex;
+  position: relative;
+  z-index: 2; /* Lower z-index than info-box */
+}
+
+.why-build-section .text-content p {
+  font-size: 15px;
+  color: #2d3748;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================= */
+/* Dotted/Dashed Connecting Lines Logic      */
+/* (Using ::before for perfect overlap)      */
+/* ========================================= */
+
+/* Columns 1 & 3: Info Box on Top, Text Below */
+.why-build-section .bottom-text {
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-top: 30px; /* Adds space between box and paragraph */
+  align-items: flex-start;
+}
+
+.why-build-section .bottom-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -60px; /* Pushes the line UP behind the blue box */
+  height: calc(100% + 60px); /* Stretches line to cover the gap + text height */
+  border-left: 1.5px dashed #010001;
+  z-index: -1; /* Keeps line behind text */
+}
+
+/* Columns 2 & 4: Text on Top, Info Box Below */
+.why-build-section .top-text {
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 30px; /* Adds space between paragraph and box */
+  align-items: flex-end; /* Pushes text to the bottom edge of the container */
+}
+
+.why-build-section .top-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100% + 60px); /* Pushes the line DOWN behind the blue box */
+  border-left: 1.5px dashed #010001;
+  z-index: -1;
+}
+
+/* ========================================= */
+/* Desktop Adjustments                       */
+/* ========================================= */
+@media (min-width: 992px) {
+  .why-build-section .item-col {
+      padding: 0 10px;
+  }
+}
+
+/* ========================================= */
+/* Mobile Responsiveness Tweaks              */
+/* ========================================= */
+@media (max-width: 991px) {
+  .why-build-section .item-col {
+      min-height: auto;
+      gap: 15px; /* Adds spacing between stacked items */
+  }
+  
+  .why-build-section .info-box {
+      height: auto;
+      min-height: 130px;
+  }
+
+  /* Reverses column order so Info Box always stays on top on mobile */
+  .why-build-section .reverse-on-mobile {
+      flex-direction: column-reverse !important;
+  }
+
+  /* Reset layout for smaller screens */
+  .why-build-section .top-text, 
+  .why-build-section .bottom-text {
+      margin-left: 0;
+      padding-left: 0;
+      margin-top: 10px;
+      margin-bottom: 20px;
+  }
+
+  /* Hide dashed lines completely on mobile for a clean stacked look */
+  .why-build-section .top-text::before,
+  .why-build-section .bottom-text::before {
+      display: none;
+  }
+
+  .why-build-section .top-text {
+      align-items: flex-start;
+  }
+}
+.container {
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+
+        .title {
+          font-weight: 700;
+          font-size: 3rem; /* Adjust based on preference, approx 48px */
+          margin-bottom: 25px;
+          line-height: 1.2;
+
+        }
+
+        .paragraph {
+          font-weight: 400;
+          font-size: 15px;
+          margin-bottom: 40px;
+          line-height: 1.7;
+          color: #010101;
+        }
+
+        .feature-grid .feature-item {
+          margin-bottom: 25px;
+          display: flex;
+          align-items: center;
+        }
+
+        .feature-grid .feature-icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 15px;
+          border-radius: 5px;
+          object-fit: contain;
+          /* Simple placeholder styles for icons if images are not available */
+          /* background-color: #fce7e7; */
+          /* padding: 5px; */
+          /* border: 1px solid #ccc; */
+        }
+
+        .feature-grid .feature-text {
+          font-weight: 500;
+          font-size: 15px;
+          margin-top: 20px;
+          /* line-height: 1.4; */
+          color: #010101;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+          .title {
+            font-size: 2.5rem;
+          }
+          .paragraph {
+            font-size: 1rem;
+            font-family: "Montserrat", sans-serif;
+            color: #010101;
+          }
+          .col-md-7 {
+            margin-bottom: 40px;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          .title {
+            font-size: 2.125rem;
+          }
+          .container {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+          .col-md-7 {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+          .feature-grid .feature-item {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .feature-grid .feature-icon {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+        .floating-buttons-right {
+          position: fixed;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          z-index: 1000;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .floating-buttons-right .btn-circle {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #0d6efd; /* Bootstrap blue */
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          border: none;
+        }
+
+        .floating-whatsapp-bottom-left {
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          z-index: 1000;
+          display: block;
+        }
+
+        .floating-buttons-bottom-right {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 1000;
+          display: flex;
+          align-items: flex-end;
+          gap: 15px;
+        }
+        .floating-buttons-bottom-right .btn-circle {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          color: #333;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+        }
+        .we-are-here {
+          position: relative;
+          background: #fff;
+          border-radius: .4em;
+          padding: 10px;
+          border: 1px solid #ccc;
+          font-size: 0.9rem;
+          margin-bottom: 20px; /* Offset from circles */
+        }
+        .we-are-here:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 0;
+          height: 0;
+          border: 10px solid transparent;
+          border-top-color: #fff;
+          border-bottom: 0;
+          margin-bottom: -10px;
+        }
+
+        /* Mobile specific floating button adjustments */
+        @media (max-width: 767.98px) {
+          .floating-buttons-right, .floating-whatsapp-bottom-left, .floating-buttons-bottom-right {
+            position: static;
+            transform: none;
+            flex-direction: row;
+            justify-content: center;
+            padding: 10px;
+            gap: 15px;
+            background-color: #fdf2f2;
+          }
+          .floating-buttons-right {
+             margin-top: 20px;
+          }
+          .floating-buttons-bottom-right {
+            flex-direction: column-reverse;
+            align-items: center;
+          }
+          .we-are-here {
+            margin-bottom: 10px;
+          }
+        }
+        .containersolution{
+          background-color: #ffe4e6;
+          width: 100%;
+          padding: 50px 60px;
+        }
+
+        .containersolution img.img-fluid {
+          padding: 0;
+          margin: 0;
+          display: block;
+        }
+
+        .cost-banner-wrapper {
+  font-family: "Montserrat", sans-serif;
+  
+  /* Yahan apni Downloaded Background Image ka path lagayein */
+  background-image: url('../Asset/Images/portf.png'); 
+  height:260x;
+  
+  background-size: cover;
+  background-position: center right; /* Keeps phone image visible on right */
+  background-repeat: no-repeat;
+  position: relative;
+  /* padding: 40px 0; */
+  display: flex;
+  align-items: center;
+  background-color: #110306; /* Fallback dark color */
+  overflow: hidden;
+}
+
+/* Left Image Styling */
+.calc-image {
+  width: 100%;
+  max-width: 240px;
+  height:250px;
+  border-radius: 12px; /* Curved corners */
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Slight shadow for depth */
+}
+
+/* Typography Styling */
+.cost-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.cost-desc {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+/* Custom Button Styling */
+.quote-btn {
+  background-color: #267ab5 !important; /* Exact blue color from image */
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.quote-btn:hover {
+  background-color: #1e6394 !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* White Circle Arrow inside Button */
+.arrow-circle {
+  color: #267ab5; /* Blue Arrow */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.arrow-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+/* ========================================= */
+/* Mobile & Tablet Responsiveness            */
+/* ========================================= */
+
+@media (max-width: 991.98px) {
+  .cost-title {
+    font-size: 28px;
+  }
+  .cost-banner-wrapper {
+    background-position: center; 
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cost-banner-wrapper {
+    padding: 30px 0;
+    text-align: center;
+    /* On mobile, blend bg to mostly dark so text is readable */
+    background-position: left center; 
+  }
+  
+  .calc-image {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .cost-title {
+    font-size: 24px;
+  }
+
+  .cost-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .quote-btn {
+    margin: 0 auto;
+  }
+}
+.design-card-title{
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+  line-height: 0.5;
+}
