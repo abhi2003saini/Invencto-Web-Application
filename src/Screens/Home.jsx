@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from '../Component/Header';
 import MobileDatingApp from '../Asset/Images/MobileDatingApp.png';
 import BannerOne from '../Asset/Images/bannerone.png';
 import DatingAppDevService from '../Asset/Images/datingappdeveservice.gif';
@@ -239,7 +238,6 @@ function Home() {
 
   return (
     <>
-   <Header/>
       <section className="hero-section">
         <div className="container">
           <div className="row align-items-center">
